@@ -4,7 +4,7 @@ Python scripts supporting monitory of students.
 Ⓒ 2022 - VNET :: Vida Nova Escola de Tecnologia
 """
 
-# Dados persistentes; i.e. salvo no HD (hard disk); memoria principal;
+# Dados persistentes; i.e. salvo no HD (hard disk); memoria secundaria;
 #  arquivo texto (.txt)) no mesmo diretório do script Python (.py), o programa
 # Modos de abertura:
 #  > w = write (escrever)
@@ -16,9 +16,9 @@ arquivo = open("meu_arquivo.txt","a")
 #IO = Input/Output
 
 
-# Muito CUIDADO com repeticoes infinitas (infinite looping)! Aque para uso
+# Muito CUIDADO com repeticoes infinitas (infinite looping)! Aqui para uso
 #   didatico;
-# Caso nao haja comando de pausa (e.g.: timer.sleep(SEDONDS))
+# Caso nao haja comando de pausa (e.g.: timer.sleep(SECONDS))
 #   nem condicao de saida, para interromper o loop (e.g.: usando break)
 #   o computador pode ate travar;
 while True:
