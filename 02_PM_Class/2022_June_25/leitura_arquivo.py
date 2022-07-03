@@ -4,7 +4,7 @@ Python scripts supporting monitory of students.
 Ⓒ 2022 - VNET :: Vida Nova Escola de Tecnologia
 """
 
-# Dados persistentes; i.e. salvo no HD (hard disk); memoria principal;
+# Dados persistentes; i.e. salvo no HD (hard disk); memoria secundaria;
 #  arquivo texto (.txt)) no mesmo diretório do script Python (.py), o programa
 # Modos de abertura:
 #  > w = write (escrever)
