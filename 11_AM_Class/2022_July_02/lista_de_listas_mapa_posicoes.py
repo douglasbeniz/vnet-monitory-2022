@@ -44,8 +44,8 @@ print("\nespaco de convencoes vida nova escola de technologia\n".title())
 
 print("vamos preparar o salao?\n".title())
 
-fileiras = int(input("por favor, informe quantas fileiras de cadeiras existem:".title()))
-colunas = int(input("agora informe quantas colunas de cadeiras existem:".title()))
+fileiras = int(input("por favor, informe quantas fileiras de cadeiras existem: ".title()))
+colunas = int(input("agora informe quantas colunas de cadeiras existem: ".title()))
 
 # ------------------------------------------------------------------------------
 # Declaracao da lista de listas (matriz) que sera usapara para criar o mapa
@@ -89,7 +89,7 @@ while True:
         break
     else:
         colunaOcupadaIdx = cabecalhoMapa.find(colunaOcupada.upper())
-        if colunaOcupadaIdx == -1 or colunaOcupadaIdx +1 > colunas:
+        if not colunaOcupada or colunaOcupadaIdx == -1 or colunaOcupadaIdx +1 > colunas:
             print (f"Coluna {colunaOcupada.upper()} inexistente. Escolha outra, por favor")
             continue    # repetir o loop (while)
 
@@ -102,7 +102,7 @@ while True:
             # consulte "list comprehension" (compreensao de listas) na documentacao, uso do <chave_busca> in <sub-lista> for <sub-lista> in <list>
             #   https://docs.python.org/pt-br/3/tutorial/datastructures.html#nested-list-comprehensions
             mostraMapaSalao(colunas, mapaSalao)
-            print (f"Salao lotado!")
+            print ("\nSalao lotado!\n")
             break   # interrompe a repeticao (while)
     else:   # assento ocupado ou fora da lista
         print (f"Posicao '{filaOcupada}-{colunaOcupada.upper()}' ja reservada. Escolha outra, por favor!")
