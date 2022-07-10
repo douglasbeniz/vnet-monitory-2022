@@ -27,3 +27,11 @@ except FileNotFoundError:
     print("Arquivo nao encontrado!")
     exit()
 
+
+# Equivalente a utilizar o 'with .. as ..:'
+#   porem com with nao eh preciso se preocupar em fechar o arquivo
+#
+# with <objeto> as <variavel>
+with open("meu_arquivo.txt","r") as meuArquivo:
+    for line in meuArquivo:
+        print(line)

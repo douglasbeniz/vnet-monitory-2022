@@ -21,3 +21,9 @@ while True:         # repetir "enquanto for verdadeiro" (sempre, caso não haha 
         print("Valor invalido, por favor tente novamente...")
 
 print(f"Voce digigou: {entrada}")  # apenas exibindo o que recebei do usuario no "input"
+
+
+if entrada > 100:
+    raise Exception("Valor nao permitido, maior do que 100!")
+
+print("Fim do programa")

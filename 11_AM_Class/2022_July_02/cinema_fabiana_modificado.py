@@ -39,7 +39,7 @@ def mostraOcupacaoCinema(vetor):
     print("Ocupacao atual do cinema")
     numero_assento = 1
     for situacao in vetor:
-        print (f"Assento {numero_assento}: {situacao} ")
+        print(f"Assento {numero_assento}: {situacao} ")
         numero_assento = numero_assento +1
 
 print("\n CINEMA VIDA NOVA \n")
@@ -66,7 +66,7 @@ while True:
         vetorLugares[assento -1] = 'Reservado'
         if "-" not in vetorLugares:     # nao ha assentos livres
             mostraOcupacaoCinema(vetorLugares)
-            print (f"Cinema lotado!")
+            print ("Cinema lotado!")
             break   # interrompe a repeticao (while)
     else:   # assento ocupado ou fora da lista
         print (f"Assento {assento} reservado. Escolha outro lugar")
