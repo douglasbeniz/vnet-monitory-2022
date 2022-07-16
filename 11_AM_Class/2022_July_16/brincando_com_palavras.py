@@ -1,3 +1,9 @@
+"""
+Python scripts supporting monitory of students.
+
+Ⓒ 2022 - VNET :: Vida Nova Escola de Tecnologia
+"""
+
 import sys
 """
 Este site possui um compilado de todas as palavras do português brasileiro (ou, pelo menos, é o que eles dizem). Minha sugestão é baixar o arquivo 
