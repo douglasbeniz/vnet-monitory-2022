@@ -4,7 +4,6 @@ Python scripts supporting monitory of students.
 Ⓒ 2022 - VNET :: Vida Nova Escola de Tecnologia
 """
 
-import sys
 """
 Este site possui um compilado de todas as palavras do português brasileiro (ou, pelo menos, é o que eles dizem). Minha sugestão é baixar o arquivo 
 
@@ -26,7 +25,7 @@ Faça uma função para cada item abaixo:
 """
 
 lista_palavras = []
-with open(sys.path[0] + "/br-utf8.txt", "r") as arquivo_portugues:
+with open("br-utf8.txt", "r", encoding="utf-8") as arquivo_portugues:
     for linha in arquivo_portugues:
         lista_palavras.append(linha.upper())
 
@@ -101,7 +100,7 @@ Identifique as palavras começam com as mesmas 3 letras do seu nome e salve-as n
 # >>> texto[:3]
 # 'ABC'
 def conta_palavra_tres_letras(lista_palavras, inicias_nome):
-    with open(sys.path[0] + "/arquivos_iniciam_tres_letras.txt", "a") as arquivo_escrita:
+    with open("arquivos_iniciam_tres_letras.txt", "a", encoding="utf-8") as arquivo_escrita:
         for palavra in lista_palavras:
             if palavra[:3] == inicias_nome:
                 arquivo_escrita.write(palavra)
