@@ -100,7 +100,7 @@ Identifique as palavras começam com as mesmas 3 letras do seu nome e salve-as n
 # >>> texto[:3]
 # 'ABC'
 def conta_palavra_tres_letras(lista_palavras, inicias_nome):
-    with open("arquivos_iniciam_tres_letras.txt", "a", encoding="utf-8") as arquivo_escrita:
+    with open("arquivo_iniciam_tres_letras.txt", "w", encoding="utf-8") as arquivo_escrita:
         for palavra in lista_palavras:
             if palavra[:3] == inicias_nome:
                 arquivo_escrita.write(palavra)
@@ -111,10 +111,32 @@ conta_palavra_tres_letras(lista_palavras, inicias_nome="DOU")        # DOUGLAS
 """
 Identifique as palavras que possuem todas as letras do seu nome e salve-as num arquivo separado
 """
-# TODO
+def conta_palavra_letras_nome(lista_palavras, nome):
+    with open("arquivo_contem_letras_nome.txt", "w", encoding="utf-8") as arquivo_escrita:
+        lista_letras_nome = []
+        for letra in list(nome):
+            if letra not in lista_letras_nome:
+                lista_letras_nome.append(letra)
+
+        for palavra in lista_palavras:
+            contem_letra_nome = True
+            for letra in lista_letras_nome:
+                if letra not in list(palavra.strip()):
+                    contem_letra_nome = False
+                    break
+            if contem_letra_nome:
+                arquivo_escrita.write(palavra)
+
+conta_palavra_letras_nome(lista_palavras, nome="DOUGLAS")
 
 
 """
 Identifique todas as palavras que são palíndromos e salve-as num arquivo separado
 """
-# TODO
+def conta_palavra_palindromos(lista_palavras):
+    with open("arquivo_palindromos.txt", "w", encoding="utf-8") as arquivo_escrita:
+        for palavra in lista_palavras:
+            if palavra.strip() == palavra.strip()[::-1]:
+                arquivo_escrita.write(palavra)
+
+conta_palavra_palindromos(lista_palavras)
